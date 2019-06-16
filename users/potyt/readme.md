@@ -17,21 +17,24 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 This is my personal userspace file.
 
-Heavily based on drashna's code and comments for working out how all this stuff works - even this readme.
+Heavily based on drashna's code and comments for working out how all
+this stuff works - even this readme.
 
 My [DZ60 HPKB Keymap](https://github.com/qmk/qmk_firmware/blob/master/layouts/community/ergodox/drashna/keymap.c#L297)
 is an example of a layout that uses this shared code.
 
 ## Custom Keycodes
 
-Keycodes are defined in the potyt.h file and need to be included in the keymap.c files, so that they can be used there. 
+Keycodes are defined in the potyt.h file and need to be included in the
+keymap.c files, so that they can be used there.
 
 ## Layer Indication
 
-This uses the `layer_state_set_*` command to change the layer color, to indicate which layer it is on.  This includes
-the default keymap, as well.
+This uses the `layer_state_set_*` command to change the layer color, to
+indicate which layer it is on.  This includes the default keymap, as well.
 
-Since this is done via userspace, it is the same between all systems. 
+Since this is done via userspace, it is the same between all systems.
 
-Additionally, there is a custom keycode to toggle layer indication. And all RGB keycodes disable layer indication
-by default, as well.  This way, I can leave special effects doing when I want.
+Additionally, there is a custom keycode to toggle layer indication. And
+all RGB keycodes disable layer indication by default, as well.  This
+way, I can leave special effects doing when I want.

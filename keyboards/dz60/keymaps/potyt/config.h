@@ -3,9 +3,6 @@
 
 #include "config_common.h"
 
-/* Disable features incompatible with link time optimization */
-#define NO_ACTION_MACRO
-#define NO_ACTION_FUNCTION
 /* USB Device descriptor parameter */
 #define VENDOR_ID       0xFEED
 #define PRODUCT_ID      0x2260
@@ -45,11 +42,5 @@
 #define RGBLIGHT_HUE_STEP 8
 #define RGBLIGHT_SAT_STEP 8
 #define RGBLIGHT_VAL_STEP 8
-
-/* Auto Shift */
-#define AUTO_SHIFT_TIMEOUT 150
-
-/* Tap Dance */
-#define TAPPING_TERM 200
 
 #endif

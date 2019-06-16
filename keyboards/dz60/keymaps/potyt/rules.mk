@@ -1,12 +1,6 @@
 # MCU name
 MCU = atmega32u4
 
-# Bootloader
-#     This definition is optional, and if your keyboard supports multiple bootloaders of
-#     different sizes, comment this out, and the correct address will be loaded
-#     automatically (+60). See bootloader.mk for all options.
-BOOTLOADER = atmel-dfu
-
 # Processor frequency.
 #     This will define a symbol, F_CPU, in all source code files equal to the
 #     processor frequency in Hz. You can then use this symbol in your source code to
@@ -42,8 +36,6 @@ F_USB = $(F_CPU)
 # Interrupt driven control endpoint task(+60)
 OPT_DEFS += -DINTERRUPT_CONTROL_ENDPOINT
 
-# Enable link time optimisation
-EXTRAFLAGS += -flto
 
 # Boot Section Size in *bytes*
 OPT_DEFS += -DBOOTLOADER_SIZE=4096
@@ -52,20 +44,15 @@ OPT_DEFS += -DBOOTLOADER_SIZE=4096
 # Build Options
 #   comment out to disable the options.
 #
-BOOTMAGIC_ENABLE  = full  # Virtual DIP switch configuration(+1000)
-MOUSEKEY_ENABLE   = yes   # Mouse keys(+4700)
-EXTRAKEY_ENABLE   = yes   # Audio control and System control(+450)
-CONSOLE_ENABLE    = no    # Console for debug(+400)
-COMMAND_ENABLE    = no    # Commands for debug and configuration
-SLEEP_LED_ENABLE  = no    # Breathing sleep LED during USB suspend
-NKRO_ENABLE       = yes   # USB Nkey Rollover - if this doesn't work, see https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
-BACKLIGHT_ENABLE  = yes   # Enable keyboard backlight functionality
-AUDIO_ENABLE      = no    # Audio support
-UNICODE_ENABLE    = no    # Unicode support
-SWAP_HANDS_ENABLE = no    # Allow swapping hands of keyboard
-RGBLIGHT_ENABLE   = no    # RGB support
-AUTO_SHIFT_ENABLE = yes   # Auto shift
-KEY_LOCK_ENABLE   = yes   # Key lock
-TAP_DANCE_ENABLE  = no    # Tap Dance
+BOOTMAGIC_ENABLE = yes  # Virtual DIP switch configuration(+1000)
+MOUSEKEY_ENABLE = yes   # Mouse keys(+4700)
+EXTRAKEY_ENABLE = yes   # Audio control and System control(+450)
+CONSOLE_ENABLE = no     # Console for debug(+400)
+COMMAND_ENABLE = no     # Commands for debug and configuration
+SLEEP_LED_ENABLE = no   # Breathing sleep LED during USB suspend
+NKRO_ENABLE = yes       # USB Nkey Rollover - if this doesn't work, see here: https://github.com/tmk/tmk_keyboard/wiki/FAQ#nkro-doesnt-work
+BACKLIGHT_ENABLE = yes  # Enable keyboard backlight functionality
+AUDIO_ENABLE = no
+RGBLIGHT_ENABLE = yes
 
-LAYOUTS = 60_ansi 60_iso 60_hhkb
+LAYOUTS = 60_ansi 60_ansi_split_bs_rshift 60_hhkb 60_iso

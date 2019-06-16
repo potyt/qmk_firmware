@@ -18,3 +18,23 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #pragma once
 #include "quantum.h"
 #include "version.h"
+
+/* Layers */
+
+enum _layer {
+    LY_QWTY,
+    LY_DVRK,
+    LY_CLMK,
+    LY_FUNC,
+    LY_NAVI,
+    LY_LAYR,
+    LY_LRGB,
+    LY_LBCK,
+    LY_CTRL,
+};
+
+/* Tap Dances */
+
+enum _tapdance {
+    TD_PWR = 0,
+};
