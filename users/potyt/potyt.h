@@ -19,6 +19,21 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "quantum.h"
 #include "version.h"
 
+/* Keycodes */
+
+#define ALT_1 LALT(KC_1)
+#define ALT_2 LALT(KC_2)
+#define ALT_3 LALT(KC_3)
+#define ALT_4 LALT(KC_4)
+#define ALT_5 LALT(KC_5)
+#define ALT_6 LALT(KC_6)
+#define ALT_7 LALT(KC_7)
+#define ALT_8 LALT(KC_8)
+#define ALT_9 LALT(KC_9)
+#define ALT_0 LALT(KC_0)
+#define ALT_N LALT(KC_N)
+#define ALT_P LALT(KC_P)
+
 /* Layers */
 
 enum _layer {
